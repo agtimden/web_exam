@@ -1,6 +1,8 @@
-// Константы для работы с API
+// ВАЖНО: Этот API работает только при запуске сайта через HTTP (например, локальный сервер)
+// При размещении на HTTPS хостингах (например, GitHub Pages) API будет недоступен
+// из-за ограничений безопасности браузера (Mixed Content)
 const API_KEY = 'b76e208c-3e19-4004-ab0e-5f84b574e50c'; // Ключ для аутентификации в API
-const BASE_URL = 'https://exam-api-courses.std-900.ist.mospolytech.ru/api'; // Базовый URL API
+const BASE_URL = 'http://exam-api-courses.std-900.ist.mospolytech.ru/api'; // Базовый URL API
 
 // Функции для работы с курсами
 async function getCourses() {
