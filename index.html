@@ -1,0 +1,502 @@
+<!-- Объявление типа документа как HTML5 -->
+<!DOCTYPE html>
+<!-- Начало HTML документа с указанием языка (английский) -->
+<html lang="en">
+<!-- Секция head содержит метаданные, заголовок и подключаемые ресурсы -->
+<head>
+    <!-- Указание кодировки документа -->
+    <meta charset="UTF-8">
+    <!-- Настройка viewport для адаптивного дизайна -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы -->
+    <title>Learn Russian - Language School</title>
+    <!-- Подключение стилей Bootstrap 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение пользовательских стилей -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Тело документа -->
+<body>
+    <!-- Шапка сайта с навигацией -->
+    <header class="header navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Логотип и название школы -->
+            <div class="logo d-flex align-items-center">
+                <img src="image.png" alt="Learn Russian Logo" class="me-2">
+                <h1 class="navbar-brand mb-0">Learn Russian</h1>
+            </div>
+            <!-- Кнопка-гамбургер для мобильного меню -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Навигационное меню -->
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">User Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Область уведомлений -->
+    <div class="container">
+        <div class="notification-area" id="notification-area">
+            <div class="notification-content">
+                Welcome! Check out our new courses available this month!
+            </div>
+            <!-- Кнопка закрытия уведомления -->
+            <button type="button" class="notification-close" aria-label="Close notification">×</button>
+        </div>
+    </div>
+
+    <!-- Секция "О нас" -->
+    <section class="about-section py-5">
+        <div class="container">
+            <h2 class="section-title">About Our Language School</h2>
+            <p>Our mission is to provide quality education for everyone interested in learning Russian. We offer a variety of courses for all levels.</p>
+        </div>
+    </section>
+
+    <!-- Секция преимуществ -->
+    <section class="advantages-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Advantages of Learning Russian</h2>
+            <!-- Сетка преимуществ -->
+            <div class="advantages-grid">
+                <!-- Карточка преимущества 1 -->
+                <div class="advantage-card">
+                    <h3>Global Language</h3>
+                    <p>Russian is widely spoken around the world.</p>
+                </div>
+                <!-- Карточка преимущества 2 -->
+                <div class="advantage-card">
+                    <h3>Rich Culture</h3>
+                    <p>Understand Russian literature and art more deeply.</p>
+                </div>
+                <!-- Карточка преимущества 3 -->
+                <div class="advantage-card">
+                    <h3>Career Opportunities</h3>
+                    <p>Open up international career prospects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция курсов -->
+    <section class="courses-section py-5" id="courses">
+        <div class="container">
+            <h2 class="section-title">Courses Offered</h2>
+            <!-- Список курсов (заполняется динамически) -->
+            <div class="course-list row">
+                <!-- Курсы будут добавлены через JavaScript -->
+            </div>
+            <!-- Пагинация для курсов -->
+            <nav aria-label="Course navigation" class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <!-- Кнопки пагинации -->
+                    <li class="page-item">
+                        <button class="page-link" data-page="prev" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </button>
+                    </li>
+                    <li class="page-item"><button class="page-link" data-page="1">1</button></li>
+                    <li class="page-item"><button class="page-link" data-page="2">2</button></li>
+                    <li class="page-item"><button class="page-link" data-page="3">3</button></li>
+                    <li class="page-item">
+                        <button class="page-link" data-page="next" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Секция поиска курсов -->
+    <section class="search-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Search Courses</h2>
+            <!-- Форма поиска -->
+            <form class="search-form">
+                <div class="row">
+                    <!-- Поле поиска по названию -->
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="Search by course name">
+                    </div>
+                    <!-- Выбор уровня -->
+                    <div class="col-md-3">
+                        <select class="form-select">
+                            <option value="">Beginner</option>
+                            <option value="">Intermediate</option>
+                            <option value="">Advanced</option>
+                        </select>
+                    </div>
+                    <!-- Кнопка поиска -->
+                    <div class="col-md-1">
+                        <button type="submit" class="btn btn-search">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Секция преподавателей -->
+    <section class="tutors-section py-5">
+        <div class="container">
+            <h2 class="section-title">Available Tutors</h2>
+            <!-- Список преподавателей (заполняется динамически) -->
+            <div class="tutor-list row">
+                <!-- Преподаватели будут добавлены через JavaScript -->
+            </div>
+            <!-- Пагинация для преподавателей -->
+            <nav aria-label="Tutor navigation" class="mt-4">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <button class="page-link" data-page="prev" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </button>
+                    </li>
+                    <li class="page-item"><button class="page-link" data-page="1">1</button></li>
+                    <li class="page-item"><button class="page-link" data-page="2">2</button></li>
+                    <li class="page-item"><button class="page-link" data-page="3">3</button></li>
+                    <li class="page-item">
+                        <button class="page-link" data-page="next" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Кнопка запроса занятия -->
+            <button class="btn-request-session mt-4" data-bs-toggle="modal" data-bs-target="#tutoringModal">
+                Request a Tutoring Session
+            </button>
+        </div>
+    </section>
+
+    <!-- Модальное окно запроса занятия -->
+    <div class="modal fade" id="tutoringModal" tabindex="-1" aria-labelledby="tutoringModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tutoringModalLabel">Course Enrollment Form</h5>
+                    <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                </div>
+                <div class="modal-body">
+                    <form id="tutoring-request-form">
+                        <!-- Student Information -->
+                        <div class="form-group mb-3">
+                            <label for="student-name">Student Name</label>
+                            <input type="text" id="student-name" class="form-control" required>
+                        </div>
+
+                        <!-- Course Selection -->
+                        <div class="form-group mb-3">
+                            <label for="course-select">Course Name</label>
+                            <select id="course-select" class="form-control" required>
+                                <option value="">Select a course</option>
+                            </select>
+                        </div>
+
+                        <!-- Course Information (readonly) -->
+                        <div class="form-group mb-3">
+                            <label for="instructor-name">Instructor's Name</label>
+                            <input type="text" id="instructor-name" class="form-control" readonly>
+                        </div>
+
+                        <!-- Schedule -->
+                        <div class="form-group mb-3">
+                            <label for="lesson-date">Start Date</label>
+                            <input type="date" id="lesson-date" class="form-control" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="lesson-time">Start Time</label>
+                            <select id="lesson-time" class="form-control" required>
+                                <option value="09:00">09:00 to 11:00</option>
+                                <option value="11:00">11:00 to 13:00</option>
+                                <option value="14:00">14:00 to 16:00</option>
+                                <option value="16:00">16:00 to 18:00</option>
+                                <option value="18:00">18:00 to 20:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="lesson-duration">Duration (in weeks)</label>
+                            <input type="number" id="lesson-duration" class="form-control" min="1" max="52" value="10" required>
+                            <small class="text-muted" id="last-class-date"></small>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="group-size">Number of Students</label>
+                            <input type="number" id="group-size" class="form-control" min="1" max="20" value="1" required>
+                        </div>
+
+                        <!-- Additional Options -->
+                        <div class="form-group mb-3">
+                            <h6>Additional Options</h6>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="earlyRegistration" class="form-check-input" onchange="calculateTotalCost()" disabled>
+                                <label class="form-check-label" for="earlyRegistration">
+                                    Early Registration Discount (-10%)
+                                    <small class="text-muted d-block">Automatically applied when registering one month in advance</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="groupEnrollment" class="form-check-input" onchange="calculateTotalCost()" disabled>
+                                <label class="form-check-label" for="groupEnrollment">
+                                    Group Enrollment Discount (-15%)
+                                    <small class="text-muted d-block">Automatically applied for groups of 5 or more</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="intensiveCourse" class="form-check-input" onchange="calculateTotalCost()">
+                                <label class="form-check-label" for="intensiveCourse">
+                                    Intensive Course (+20%)
+                                    <small class="text-muted d-block">More than 20 hours per week</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="supplementary" class="form-check-input" onchange="calculateTotalCost()">
+                                <label class="form-check-label" for="supplementary">
+                                    Supplementary Learning Materials (+2000₽/student)
+                                    <small class="text-muted d-block">Access to additional online resources</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="personalized" class="form-check-input" onchange="calculateTotalCost()">
+                                <label class="form-check-label" for="personalized">
+                                    Personalized Sessions (+1500₽/week)
+                                    <small class="text-muted d-block">Additional one-on-one sessions</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="excursions" class="form-check-input" onchange="calculateTotalCost()">
+                                <label class="form-check-label" for="excursions">
+                                    Cultural Excursions (+25%)
+                                    <small class="text-muted d-block">Participation in organized excursions</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="assessment" class="form-check-input" onchange="calculateTotalCost()">
+                                <label class="form-check-label" for="assessment">
+                                    Language Level Assessment (+300₽)
+                                    <small class="text-muted d-block">Preliminary level testing</small>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="interactive" class="form-check-input" onchange="calculateTotalCost()">
+                                <label class="form-check-label" for="interactive">
+                                    Interactive Online Platform Access (+50%)
+                                    <small class="text-muted d-block">Advanced online learning platform</small>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Total Cost -->
+                        <div class="form-group mb-3">
+                            <h6>Total Cost: <span id="total-cost">0 Rubles</span></h6>
+                            <button type="button" class="btn btn-secondary" id="calculate-cost">Calculate Cost</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="tutoring-request-form" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секция поиска преподавателей -->
+    <section class="tutor-search-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Search for Tutors</h2>
+            <form class="search-form mb-4" id="tutor-search-form">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="language-level" class="form-label">Language Level</label>
+                        <select class="form-select" id="language-level">
+                            <option value="">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="min-experience" class="form-label">Experience (years)</label>
+                        <input type="number" class="form-control" id="min-experience" min="0" placeholder="Minimum years">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Available Time</label>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <input type="time" class="form-control" id="time-from" placeholder="From">
+                            </div>
+                            <div class="col-6">
+                                <input type="time" class="form-control" id="time-to" placeholder="To">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Available Days</label>
+                        <div class="form-control h-auto" id="available-days">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="available-days" id="monday" value="monday">
+                                <label class="form-check-label" for="monday">Mon</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="available-days" id="tuesday" value="tuesday">
+                                <label class="form-check-label" for="tuesday">Tue</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="available-days" id="wednesday" value="wednesday">
+                                <label class="form-check-label" for="wednesday">Wed</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="available-days" id="thursday" value="thursday">
+                                <label class="form-check-label" for="thursday">Thu</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="available-days" id="friday" value="friday">
+                                <label class="form-check-label" for="friday">Fri</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="available-days" id="saturday" value="saturday">
+                                <label class="form-check-label" for="saturday">Sat</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="available-days" id="sunday" value="sunday">
+                                <label class="form-check-label" for="sunday">Sun</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Search Results Table -->
+            <div class="table-responsive">
+                <table class="table table-hover" id="tutors-table">
+                    <thead>
+                        <tr>
+                            <th>Tutor Name</th>
+                            <th>Language Level</th>
+                            <th>Languages Spoken</th>
+                            <th>Experience (years)</th>
+                            <th>Hourly Rate ($)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Tutors will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Selected Tutor Details -->
+            <div id="selected-tutor-details" class="mt-4" style="display: none;">
+                <h3 class="section-title">Selected Tutor Details</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Languages Offered</th>
+                                <th>Experience</th>
+                                <th>Hourly Rate ($)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="detailed-tutor-row">
+                                <!-- Data will be populated by JavaScript -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция интерактивной карты ресурсов -->
+    <section class="map-section py-5">
+        <div class="container">
+            <h2 class="section-title">Learning Resources Map</h2>
+            <p class="mb-4">Find Russian language learning resources near you: libraries, language cafes, and cultural centers.</p>
+            
+            <!-- Search and Filter Controls -->
+            <div class="map-controls mb-4">
+                <div class="row">
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="resource-search" placeholder="Search resources...">
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select" id="resource-filter">
+                            <option value="all">All Resources</option>
+                            <option value="library">Libraries</option>
+                            <option value="cafe">Language Cafes</option>
+                            <option value="center">Cultural Centers</option>
+                            <option value="courses">Language Courses</option>
+                            <option value="club">Language Clubs</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Container -->
+            <div class="map-container mb-4">
+                <div id="resources-map" style="height: 500px; width: 100%; border-radius: 8px; background-color: #f8f9fa;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно деталей ресурса -->
+    <div class="modal fade" id="resourceModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resource Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="resource-name"></h4>
+                    <p id="resource-address"></p>
+                    <p id="resource-hours"></p>
+                    <p id="resource-contact"></p>
+                    <p id="resource-description"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Контактная информация -->
+                <div class="col-md-6">
+                    <p class="mb-0">Contact us: info@learnrussian.com</p>
+                </div>
+                <!-- Социальные сети -->
+                <div class="col-md-6 text-end">
+                    <p class="mb-0">Follow us on Facebook, Twitter, Instagram</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <!-- Bootstrap Bundle с Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- API Яндекс.Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=729a038a-d54a-4cbe-b6d9-2ec3f5324616&lang=en_US" type="text/javascript"></script>
+    <!-- Пользовательские скрипты -->
+    <script src="api.js"></script>
+    <script src="map.js"></script>
+    <script src="order.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+

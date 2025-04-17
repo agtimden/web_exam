@@ -1,0 +1,19 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "![tipografija-moskovskogo-gosudarstvennogo-industrialnogo-universiteta-5d510d16f0bdceb159dd3468864699e4](https://github.com/user-attachments/assets/35d1c5d5-26a6-4240-bd3e-5dbc914dfecb)",
+  "devDependencies": {
+    "eslint": "^9.24.0",
+    "htmlhint": "^1.1.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}

@@ -1,0 +1,952 @@
+/* Глобальные стили для всего сайта */
+/* Определение CSS-переменных для основных цветов и значений */
+:root {
+    /* Основной цвет сайта - синий */
+    --primary-color: #4285F4;
+    /* Вторичный цвет - светло-синий для фона */
+    --secondary-color: #E8F0FE;
+    /* Цвет успеха - зеленый */
+    --success-color: #4CAF50;
+    /* Основной цвет текста */
+    --text-color: #333;
+    /* Светлый цвет текста */
+    --light-text: #666;
+}
+
+/* Основные стили для body */
+body {
+    /* Использование шрифта Arial или sans-serif */
+    font-family: Arial, sans-serif;
+    /* Высота строки для лучшей читаемости */
+    line-height: 1.6;
+    /* Цвет текста из переменной */
+    color: var(--text-color);
+    /* Отступ снизу для футера */
+    margin-bottom: 60px;
+}
+
+/* Стили для шапки сайта */
+.header {
+    /* Фон шапки с использованием основного цвета */
+    background-color: var(--primary-color) !important;
+    /* Внутренние отступы */
+    padding: 1rem 0;
+}
+
+/* Стили для элементов навигации */
+.header .navbar-brand,
+.header .nav-link {
+    /* Белый цвет текста в шапке */
+    color: white !important;
+}
+
+/* Стили для логотипа */
+.logo img {
+    /* Фиксированная ширина логотипа */
+    width: 40px;
+    /* Автоматическая высота для сохранения пропорций */
+    height: auto;
+}
+
+/* Стили для области уведомлений */
+.notification-area {
+    /* Фон области уведомлений */
+    background-color: var(--secondary-color);
+    /* Внутренние отступы */
+    padding: 1rem;
+    /* Внешние отступы */
+    margin: 1rem 0;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Позиционирование */
+    position: relative;
+    /* Flex-контейнер для выравнивания элементов */
+    display: flex;
+    /* Распределение пространства между элементами */
+    justify-content: space-between;
+    /* Выравнивание по центру по вертикали */
+    align-items: center;
+}
+
+/* Стили для содержимого уведомления */
+.notification-content {
+    /* Растягивание на доступное пространство */
+    flex-grow: 1;
+    /* Отступ справа */
+    padding-right: 2rem;
+}
+
+/* Стили для кнопки закрытия уведомления */
+.notification-close {
+    /* Прозрачный фон */
+    background: none;
+    /* Удаление границы */
+    border: none;
+    /* Цвет текста */
+    color: var(--text-color);
+    /* Размер шрифта */
+    font-size: 1.5rem;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Внутренние отступы */
+    padding: 0.25rem 0.5rem;
+    /* Высота строки */
+    line-height: 1;
+    /* Прозрачность */
+    opacity: 0.7;
+}
+
+/* Эффект при наведении на кнопку закрытия */
+.notification-close:hover {
+    /* Увеличение непрозрачности */
+    opacity: 1;
+}
+
+/* Стили для заголовков секций */
+.section-title {
+    /* Размер шрифта */
+    font-size: 2rem;
+    /* Отступ снизу */
+    margin-bottom: 1.5rem;
+    /* Цвет текста */
+    color: var(--text-color);
+}
+
+/* Стили для сетки преимуществ */
+.advantages-grid {
+    /* Отображение в виде сетки */
+    display: grid;
+    /* Автоматическое определение количества колонок */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Отступы между элементами */
+    gap: 2rem;
+    /* Внешние отступы */
+    margin: 2rem 0;
+}
+
+/* Стили для карточек преимуществ */
+.advantage-card {
+    /* Внутренние отступы */
+    padding: 1.5rem;
+    /* Скругление углов */
+    border-radius: 8px;
+    /* Белый фон */
+    background: white;
+    /* Тень */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Стили для заголовков в карточках преимуществ */
+.advantage-card h3 {
+    /* Цвет текста */
+    color: var(--primary-color);
+    /* Отступ снизу */
+    margin-bottom: 1rem;
+}
+
+/* Стили для элементов курсов */
+.course-item {
+    /* Внутренние отступы */
+    padding: 1rem;
+    /* Граница */
+    border: 1px solid #ddd;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Отступ снизу */
+    margin-bottom: 1rem;
+    /* Белый фон */
+    background: white;
+}
+
+/* Стили для формы поиска */
+.search-form {
+    /* Внешние отступы */
+    margin: 2rem 0;
+}
+
+/* Стили для полей ввода в форме поиска */
+.search-form input,
+.search-form select {
+    /* Внутренние отступы */
+    padding: 0.5rem;
+    /* Граница */
+    border: 1px solid #ddd;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Отступ справа */
+    margin-right: 1rem;
+}
+
+/* Стили для кнопки поиска */
+.btn-search {
+    /* Фон кнопки */
+    background-color: var(--primary-color);
+    /* Цвет текста */
+    color: white;
+    /* Удаление границы */
+    border: none;
+    /* Внутренние отступы */
+    padding: 0.5rem 1.5rem;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Курсор-указатель */
+    cursor: pointer;
+}
+
+/* Стили для списка преподавателей */
+.tutor-list {
+    /* Отступ снизу */
+    margin-bottom: 2rem;
+}
+
+/* Стили для карточек преподавателей */
+.tutor-list .card {
+    /* Анимация при наведении */
+    transition: transform 0.2s ease-in-out;
+    /* Тень */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Эффект при наведении на карточку преподавателя */
+.tutor-list .card:hover {
+    /* Смещение вверх */
+    transform: translateY(-5px);
+    /* Увеличение тени */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Стили для тела карточки преподавателя */
+.tutor-list .card-body {
+    /* Внутренние отступы */
+    padding: 1.5rem;
+}
+
+/* Стили для заголовка карточки преподавателя */
+.tutor-list .card-title {
+    /* Цвет текста */
+    color: #333;
+    /* Отступ снизу */
+    margin-bottom: 1rem;
+    /* Размер шрифта */
+    font-size: 1.5rem;
+}
+
+/* Стили для текста карточки преподавателя */
+.tutor-list .card-text {
+    /* Цвет текста */
+    color: #666;
+    /* Отступ снизу */
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для основной кнопки в карточке преподавателя */
+.tutor-list .btn-primary {
+    /* Отступ сверху */
+    margin-top: 1rem;
+    /* Ширина на всю доступную ширину */
+    width: 100%;
+}
+
+/* Стили для кнопки запроса сессии */
+.btn-request-session {
+    /* Блочное отображение */
+    display: block;
+    /* Центрирование */
+    margin: 2rem auto 0;
+    /* Внутренние отступы */
+    padding: 0.75rem 2rem;
+    /* Размер шрифта */
+    font-size: 1.1rem;
+    /* Фон кнопки */
+    background-color: var(--success-color);
+    /* Удаление границы */
+    border: none;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Цвет текста */
+    color: white;
+    /* Анимация при наведении */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Эффект при наведении на кнопку запроса сессии */
+.btn-request-session:hover {
+    /* Изменение цвета фона */
+    background-color: #45a049;
+}
+
+/* Стили для пагинации */
+.pagination {
+    /* Отступ сверху */
+    margin-top: 2rem;
+}
+
+/* Стили для ссылок пагинации */
+.page-link {
+    /* Цвет текста */
+    color: var(--primary-color);
+}
+
+/* Эффект при наведении на ссылку пагинации */
+.page-link:hover {
+    /* Изменение цвета текста */
+    color: white;
+    /* Изменение цвета фона */
+    background-color: var(--primary-color);
+}
+
+/* Стили для подвала сайта */
+.footer {
+    /* Абсолютное позиционирование */
+    position: absolute;
+    /* Прикрепление к низу */
+    bottom: 0;
+    /* Ширина на весь экран */
+    width: 100%;
+    /* Фиксированная высота */
+    height: 60px;
+    /* Фон */
+    background-color: #f8f9fa;
+    /* Верхняя граница */
+    border-top: 1px solid #dee2e6;
+}
+
+/* Стили для параграфов в подвале */
+.footer p {
+    /* Высота строки */
+    line-height: 60px;
+    /* Удаление внешних отступов */
+    margin: 0;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    /* Изменение сетки преимуществ на мобильных */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Изменение полей формы поиска на мобильных */
+    .search-form input,
+    .search-form select {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Стили для секции карты */
+.map-section {
+    /* Фон */
+    background-color: #fff;
+    /* Скругление углов */
+    border-radius: 8px;
+    /* Тень */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для контейнера карты */
+.map-container {
+    /* Относительное позиционирование */
+    position: relative;
+    /* Скрытие переполнения */
+    overflow: hidden;
+    /* Граница */
+    border: 1px solid #e0e0e0;
+    /* Скругление углов */
+    border-radius: 8px;
+}
+
+/* Стили для элементов управления картой */
+.map-controls {
+    /* Фон */
+    background-color: #f8f9fa;
+    /* Внутренние отступы */
+    padding: 15px;
+    /* Скругление углов */
+    border-radius: 8px;
+    /* Отступ снизу */
+    margin-bottom: 20px;
+}
+
+/* Стили для поля поиска ресурсов */
+#resource-search {
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Граница */
+    border: 1px solid #ced4da;
+}
+
+/* Стили для фильтра ресурсов */
+#resource-filter {
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Граница */
+    border: 1px solid #ced4da;
+}
+
+/* Стили для списка ресурсов */
+.resource-list {
+    /* Фон */
+    background-color: #f8f9fa;
+    /* Внутренние отступы */
+    padding: 20px;
+    /* Скругление углов */
+    border-radius: 8px;
+}
+
+/* Стили для карточек в списке ресурсов */
+.resource-list .card {
+    /* Анимация при наведении */
+    transition: transform 0.2s;
+    /* Граница */
+    border: 1px solid #e0e0e0;
+}
+
+/* Эффект при наведении на карточку ресурса */
+.resource-list .card:hover {
+    /* Смещение вверх */
+    transform: translateY(-5px);
+    /* Тень */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для тела карточки ресурса */
+.resource-list .card-body {
+    /* Внутренние отступы */
+    padding: 15px;
+}
+
+/* Стили для заголовка карточки ресурса */
+.resource-list .card-title {
+    /* Размер шрифта */
+    font-size: 1.1rem;
+    /* Отступ снизу */
+    margin-bottom: 10px;
+    /* Цвет текста */
+    color: #333;
+}
+
+/* Стили для текста карточки ресурса */
+.resource-list .card-text {
+    /* Цвет текста */
+    color: #666;
+    /* Размер шрифта */
+    font-size: 0.9rem;
+    /* Отступ снизу */
+    margin-bottom: 10px;
+}
+
+/* Стили для модальных окон */
+.modal-content {
+    /* Скругление углов */
+    border-radius: 8px;
+}
+
+/* Стили для заголовка модального окна */
+.modal-header {
+    /* Фон */
+    background-color: #f8f9fa;
+    /* Нижняя граница */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Стили для заголовков в теле модального окна */
+.modal-body h4 {
+    /* Цвет текста */
+    color: #333;
+    /* Отступ снизу */
+    margin-bottom: 15px;
+}
+
+/* Стили для параграфов в теле модального окна */
+.modal-body p {
+    /* Цвет текста */
+    color: #666;
+    /* Отступ снизу */
+    margin-bottom: 10px;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    /* Изменение отступов элементов управления картой */
+    .map-controls .row > div {
+        margin-bottom: 10px;
+    }
+    
+    /* Изменение высоты контейнера карты */
+    .map-container {
+        height: 300px;
+    }
+    
+    /* Изменение отступов колонок списка ресурсов */
+    .resource-list .col-md-6 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Стили для списка курсов */
+.course-list {
+    /* Отступ снизу */
+    margin-bottom: 2rem;
+}
+
+/* Стили для карточек курсов */
+.course-list .card {
+    /* Анимация при наведении */
+    transition: transform 0.2s ease-in-out;
+    /* Тень */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Эффект при наведении на карточку курса */
+.course-list .card:hover {
+    /* Смещение вверх */
+    transform: translateY(-5px);
+    /* Увеличение тени */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Стили для тела карточки курса */
+.course-list .card-body {
+    /* Внутренние отступы */
+    padding: 1.5rem;
+}
+
+/* Стили для заголовка карточки курса */
+.course-list .card-title {
+    /* Цвет текста */
+    color: #333;
+    /* Отступ снизу */
+    margin-bottom: 1rem;
+    /* Размер шрифта */
+    font-size: 1.5rem;
+}
+
+/* Стили для текста карточки курса */
+.course-list .card-text {
+    /* Цвет текста */
+    color: #666;
+    /* Отступ снизу */
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для основной кнопки в карточке курса */
+.course-list .btn-primary {
+    /* Отступ сверху */
+    margin-top: 1rem;
+    /* Ширина на всю доступную ширину */
+    width: 100%;
+}
+
+/* Стили для пагинации */
+.pagination {
+    /* Отступ сверху */
+    margin-top: 2rem;
+}
+
+/* Стили для ссылок пагинации */
+.pagination .page-link {
+    /* Цвет текста */
+    color: #333;
+    /* Удаление границы */
+    border: none;
+    /* Внутренние отступы */
+    padding: 0.5rem 1rem;
+    /* Внешние отступы */
+    margin: 0 0.25rem;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Анимация при наведении */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Эффект при наведении на ссылку пагинации */
+.pagination .page-link:hover {
+    /* Изменение цвета фона */
+    background-color: #f8f9fa;
+    /* Изменение цвета текста */
+    color: #0056b3;
+}
+
+/* Стили для активной страницы пагинации */
+.pagination .page-item.active .page-link {
+    /* Фон активной страницы */
+    background-color: #007bff;
+    /* Цвет текста активной страницы */
+    color: white;
+}
+
+/* Стили для секции поиска преподавателей */
+.tutor-search-section {
+    /* Фон */
+    background-color: #f8f9fa;
+    /* Внутренние отступы */
+    padding: 2rem 0;
+}
+
+/* Стили для меток формы поиска преподавателей */
+.tutor-search-section .form-label {
+    /* Жирный шрифт */
+    font-weight: 500;
+    /* Отступ снизу */
+    margin-bottom: 0.5rem;
+}
+
+/* Стили для полей ввода и выбора в форме поиска преподавателей */
+.tutor-search-section .form-control,
+.tutor-search-section .form-select {
+    /* Граница */
+    border: 1px solid #ced4da;
+    /* Скругление углов */
+    border-radius: 4px;
+}
+
+/* Стили для выбора доступных дней */
+.tutor-search-section #available-days {
+    /* Внутренние отступы */
+    padding: 0.75rem;
+    /* Граница */
+    border: 1px solid #ced4da;
+    /* Скругление углов */
+    border-radius: 0.25rem;
+    /* Фон */
+    background-color: #fff;
+    /* Flex-контейнер */
+    display: flex;
+    /* Распределение пространства между элементами */
+    justify-content: space-between;
+    /* Выравнивание по центру по вертикали */
+    align-items: center;
+    /* Перенос элементов на новую строку */
+    flex-wrap: wrap;
+    /* Отступы между элементами */
+    gap: 0.5rem;
+}
+
+/* Стили для чекбоксов дней недели */
+.tutor-search-section .form-check-inline {
+    /* Удаление внешних отступов */
+    margin: 0;
+    /* Растягивание на доступное пространство */
+    flex: 1;
+    /* Минимальная ширина */
+    min-width: calc(14.28% - 0.5rem);
+    /* Flex-контейнер */
+    display: flex;
+    /* Выравнивание по центру */
+    justify-content: center;
+}
+
+/* Стили для чекбоксов */
+.tutor-search-section .form-check-input {
+    /* Отступ справа */
+    margin-right: 0.25rem;
+}
+
+/* Стили для меток чекбоксов */
+.tutor-search-section .form-check-label {
+    /* Удаление отступа снизу */
+    margin-bottom: 0;
+    /* Запрет переноса текста */
+    white-space: nowrap;
+}
+
+/* Стили для таблицы преподавателей */
+#tutors-table {
+    /* Отступ сверху */
+    margin-top: 2rem;
+    /* Фон */
+    background-color: #fff;
+    /* Скругление углов */
+    border-radius: 8px;
+    /* Тень */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовков таблицы преподавателей */
+#tutors-table th {
+    /* Фон */
+    background-color: #f8f9fa;
+    /* Нижняя граница */
+    border-bottom: 2px solid #dee2e6;
+    /* Внутренние отступы */
+    padding: 1rem;
+}
+
+/* Стили для ячеек таблицы преподавателей */
+#tutors-table td {
+    /* Внутренние отступы */
+    padding: 1rem;
+    /* Выравнивание по вертикали */
+    vertical-align: middle;
+}
+
+/* Стили для выбранной строки в таблице преподавателей */
+#tutors-table tr.selected {
+    /* Фон выбранной строки */
+    background-color: rgba(40, 167, 69, 0.1) !important;
+}
+
+/* Эффект при наведении на строку таблицы преподавателей */
+#tutors-table tr:hover {
+    /* Изменение фона при наведении */
+    background-color: rgba(66, 133, 244, 0.05);
+}
+
+/* Стили для кнопки выбора преподавателя */
+.btn-select-tutor {
+    /* Ширина на всю доступную ширину */
+    width: 100%;
+    /* Анимация при наведении */
+    transition: all 0.3s ease;
+}
+
+/* Стили для невыбранной кнопки выбора преподавателя */
+.btn-select-tutor:not(.selected) {
+    /* Фон */
+    background-color: var(--primary-color);
+    /* Цвет границы */
+    border-color: var(--primary-color);
+    /* Цвет текста */
+    color: white;
+}
+
+/* Эффект при наведении на невыбранную кнопку выбора преподавателя */
+.btn-select-tutor:not(.selected):hover {
+    /* Изменение цвета фона */
+    background-color: #0056b3;
+    /* Изменение цвета границы */
+    border-color: #0056b3;
+}
+
+/* Стили для выбранной кнопки выбора преподавателя */
+.btn-select-tutor.selected {
+    /* Фон */
+    background-color: #28a745 !important;
+    /* Цвет границы */
+    border-color: #28a745 !important;
+    /* Цвет текста */
+    color: white !important;
+}
+
+/* Стили для полей ввода времени */
+#time-from,
+#time-to {
+    /* Внутренние отступы */
+    padding: 0.375rem 0.75rem;
+    /* Граница */
+    border: 1px solid #ced4da;
+    /* Скругление углов */
+    border-radius: 0.25rem;
+}
+
+/* Стили для выбора доступных дней */
+#available-days {
+    /* Внутренние отступы */
+    padding: 0.75rem;
+    /* Граница */
+    border: 1px solid #ced4da;
+    /* Скругление углов */
+    border-radius: 0.25rem;
+    /* Фон */
+    background-color: #fff;
+    /* Flex-контейнер */
+    display: flex;
+    /* Распределение пространства между элементами */
+    justify-content: space-between;
+    /* Выравнивание по центру по вертикали */
+    align-items: center;
+    /* Перенос элементов на новую строку */
+    flex-wrap: wrap;
+    /* Отступы между элементами */
+    gap: 0.5rem;
+}
+
+/* Стили для чекбоксов дней недели */
+#available-days .form-check-inline {
+    /* Удаление внешних отступов */
+    margin: 0;
+    /* Растягивание на доступное пространство */
+    flex: 1;
+    /* Минимальная ширина */
+    min-width: calc(14.28% - 0.5rem);
+    /* Flex-контейнер */
+    display: flex;
+    /* Выравнивание по центру */
+    justify-content: center;
+}
+
+/* Стили для чекбоксов */
+#available-days .form-check-input {
+    /* Отступ справа */
+    margin-right: 0.25rem;
+}
+
+/* Стили для меток чекбоксов */
+#available-days .form-check-label {
+    /* Удаление отступа снизу */
+    margin-bottom: 0;
+    /* Запрет переноса текста */
+    white-space: nowrap;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    /* Изменение выравнивания дней недели */
+    #available-days {
+        justify-content: flex-start;
+    }
+    
+    /* Изменение ширины чекбоксов дней недели */
+    #available-days .form-check-inline {
+        min-width: calc(25% - 0.5rem);
+    }
+}
+
+/* Адаптивные стили для очень маленьких экранов */
+@media (max-width: 576px) {
+    /* Изменение ширины чекбоксов дней недели */
+    #available-days .form-check-inline {
+        min-width: calc(33.33% - 0.5rem);
+    }
+}
+
+/* Стили для активного фильтра */
+.filter-active {
+    /* Изменение цвета границы */
+    border-color: var(--primary-color) !important;
+    /* Тень */
+    box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+/* Стили для деталей выбранного преподавателя */
+#selected-tutor-details {
+    /* Скрытие по умолчанию */
+    display: none;
+    /* Фон */
+    background-color: #f8f9fa;
+    /* Скругление углов */
+    border-radius: 8px;
+    /* Внутренние отступы */
+    padding: 20px;
+    /* Отступ сверху */
+    margin-top: 20px;
+    /* Тень */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Анимация появления */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    /* Начальное состояние */
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    /* Конечное состояние */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для таблицы в деталях преподавателя */
+#selected-tutor-details table {
+    /* Фон */
+    background-color: white;
+    /* Удаление отступа снизу */
+    margin-bottom: 0;
+}
+
+/* Стили для заголовков таблицы в деталях преподавателя */
+#selected-tutor-details th {
+    /* Фон */
+    background-color: #f8f9fa;
+}
+
+/* Стили для имени преподавателя */
+.tutor-name {
+    /* Жирный шрифт */
+    font-weight: bold;
+    /* Цвет текста */
+    color: #333;
+}
+
+/* Стили для email преподавателя */
+.tutor-email {
+    /* Цвет текста */
+    color: #666;
+}
+
+/* Стили для списка языков */
+.languages-list {
+    /* Отступ снизу */
+    margin-bottom: 5px;
+}
+
+/* Стили для деталей опыта */
+.experience-details {
+    /* Цвет текста */
+    color: #28a745;
+}
+
+/* Стили для деталей цены */
+.price-details {
+    /* Жирный шрифт */
+    font-weight: bold;
+    /* Цвет текста */
+    color: #0056b3;
+}
+
+/* Стили для имени преподавателя */
+.tutor-name {
+    /* Жирный шрифт */
+    font-weight: 500;
+    /* Размер шрифта */
+    font-size: 1.1rem;
+    /* Отступ снизу */
+    margin-bottom: 0.25rem;
+}
+
+/* Стили для основных языков */
+.languages-list .main-languages {
+    /* Жирный шрифт */
+    font-weight: 500;
+    /* Отступ снизу */
+    margin-bottom: 0.25rem;
+}
+
+/* Стили для лет опыта */
+.experience-details .years {
+    /* Жирный шрифт */
+    font-weight: 500;
+    /* Цвет текста */
+    color: #28a745;
+}
+
+/* Стили для цены */
+.price-details .price {
+    /* Жирный шрифт */
+    font-weight: 600;
+    /* Размер шрифта */
+    font-size: 1.2rem;
+    /* Цвет текста */
+    color: #0056b3;
+}
+
+/* Стили для кнопки подтверждения выбора преподавателя */
+.btn-confirm-tutor {
+    /* Ширина на всю доступную ширину */
+    width: 100%;
+    /* Внутренние отступы */
+    padding: 0.5rem 1rem;
+}
+
+/* Общие стили для HTML */
+html {
+    /* Относительное позиционирование */
+    position: relative;
+    /* Минимальная высота на весь экран */
+    min-height: 100%;
+} 
